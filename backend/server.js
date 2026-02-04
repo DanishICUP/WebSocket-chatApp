@@ -1,7 +1,6 @@
 import { Server } from 'socket.io'
 import { createServer } from 'node:http'
 import express from 'express'
-import { Socket } from 'node:dgram'
 
 const app = express()
 const PORT = 5000
@@ -51,6 +50,7 @@ io.on('connection', (socket) => {
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
+
 
 server.listen(PORT, () => {
     console.log(`server is running on port:${PORT}`)
